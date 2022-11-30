@@ -1,0 +1,45 @@
+!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	background-image:url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80.jpg');}
+  p{
+  	color:powderblue;
+    }
+     h1{
+     border:5px solid white;
+  	color:red;
+    font-family:consolas;
+    }
+    h2{
+      color:rgb(209, 157, 27);
+    }
+   
+</style>
+<title>Fahrenheit to Celcius Converter</title>
+</head>
+<body>
+<p style="background-image:url('background.jpg');">
+
+<h1>Convertion of Temperature</h1>
+<h2>Digvijaya's converter</h2>
+<p>Enter the value in Fahrenheit:</p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<p>The temperature is converted to celsius</p>
+
+<script>
+function temperatureConverter(val) {
+  val = parseFloat(val);
+  document.getElementById("outputCelcius").innerHTML=(val-32)/1.8;
+}
+</script>
+
+</body>
+</html>
